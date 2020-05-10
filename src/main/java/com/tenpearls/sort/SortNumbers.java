@@ -23,11 +23,7 @@ public class SortNumbers {
             @Override
             public int compare(Integer x, Integer y) {
                 if ((x % 2 == 0 && y % 2 == 0) || (x % 2 != 0 && y % 2 != 0)) {
-                    if (x % 2 == 0) {
-                        return Integer.compare(x, y);
-                    } else {
-                        return Integer.compare(x, y);
-                    }
+                    return Integer.compare(x, y);
                 }
                 if ((x&1) == 0) {
                     return 1;
