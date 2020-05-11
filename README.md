@@ -11,7 +11,7 @@ Go to the location of source code using following command
     cd /path/to/sourcecode
 
 
-Run the mavne command to build the application with test
+Run the maven command to build the application with test
 
     mvn clean install
 
