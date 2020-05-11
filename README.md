@@ -5,7 +5,7 @@ This application sorts numbers as following requirement:
 # System requirement
 Java and maven must be installed in order to run the application
 
-# running the application
+# Running the application
 Go to the location of source code using following command
     
     cd /path/to/sourcecode
