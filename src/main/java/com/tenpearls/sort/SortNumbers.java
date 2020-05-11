@@ -21,14 +21,7 @@ public class SortNumbers {
     public void oddEvenSort(Integer[] numbers) {
 
         int numbersSize = numbers.length;
-//Integer[] someNumbers = new Integer[] {3, 4, 2, 1, 6, 7};
         int j = -1, temp;
-//        System.out.print("Sorting odd even: ");
-        System.out.print("[");
-        for(int i = 0; i < numbers.length; i++) {
-            System.out.print(numbers[i] + ", ");
-        }
-        System.out.print("], sorted: [");
         for (int i = 0; i < numbersSize; i++) {
 
             if (numbers[i] % 2 != 0) {
@@ -46,10 +39,5 @@ public class SortNumbers {
                 }
             }
         }
-        for(int i = 0; i < numbers.length; i++) {
-            System.out.print(numbers[i] + ", ");
-        }
-        System.out.println("]");
     }
 }
-

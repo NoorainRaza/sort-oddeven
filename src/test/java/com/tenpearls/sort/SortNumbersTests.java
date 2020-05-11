@@ -85,5 +85,11 @@ public class SortNumbersTests {
         sortNumbers.oddEvenSort(duplicateNumbers);
         Assert.assertArrayEquals(duplicateNumbers, duplicateNumbersSorted);
     }
+
+    @Test
+    public void oddEvenSort_withMoreNumbersTest() {
+        sortNumbers.oddEvenSort(moreNumbers);
+        Assert.assertArrayEquals(moreNumbers, moreNumbers);
+    }
 }
 
