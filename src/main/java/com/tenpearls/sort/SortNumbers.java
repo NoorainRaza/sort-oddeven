@@ -19,17 +19,37 @@ public class SortNumbers {
      * @param numbers
      */
     public void oddEvenSort(Integer[] numbers) {
-        Arrays.asList(numbers).sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer x, Integer y) {
-                if ((x % 2 == 0 && y % 2 == 0) || (x % 2 != 0 && y % 2 != 0)) {
-                    return Integer.compare(x, y);
+
+        int numbersSize = numbers.length;
+//Integer[] someNumbers = new Integer[] {3, 4, 2, 1, 6, 7};
+        int j = -1, temp;
+//        System.out.print("Sorting odd even: ");
+        System.out.print("[");
+        for(int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + ", ");
+        }
+        System.out.print("], sorted: [");
+        for (int i = 0; i < numbersSize; i++) {
+
+            if (numbers[i] % 2 != 0) {
+
+                j++;
+                if (i > 0) {
+                    for (int k = i - 1; k >= j; k--) {
+                        if (numbers[k] % 2 == 0) {
+
+                            temp = numbers[k+1];
+                            numbers[k+1] = numbers[k];
+                            numbers[k] = temp;
+                        }
+                    }
                 }
-                if ((x&1) == 0) {
-                    return 1;
-                }
-                return -1;
             }
-        });
+        }
+        for(int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + ", ");
+        }
+        System.out.println("]");
     }
 }
+
